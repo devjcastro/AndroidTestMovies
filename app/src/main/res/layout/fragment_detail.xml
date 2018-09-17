@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.movie.detail.DetailFilmActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/layoutDetailFilm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="100dp">
+
+
+            <ImageView
+                android:id="@+id/imgCover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="250dp"
+                android:background="#000"
+                tools:src="@drawable/upcoming_movie"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/imgCover"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tvLabelVoteCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Vote Count" />
+
+                <TextView
+                    android:id="@+id/tvVoteCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/tvLabelVoteCount"
+                    tools:text="6556" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="13dp"
+                    android:layout_toStartOf="@+id/ratingBar"
+                    tools:text="3.45"
+                    android:id="@+id/ratingBarText" />
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_weight="1"
+                    android:isIndicator="true"
+                    android:stepSize="0.1"
+                    tools:rating="3.45"
+                    android:id="@+id/ratingBar" />
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvVoteCount"
+                    android:layout_marginTop="14dp">
+
+
+                    <TextView
+                        android:id="@+id/tvViewTrailer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ver Trailer"
+                        android:textColor="#ff0000"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="20dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:autoLink="all"/>
+
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        tools:text="Justice League" />
+
+                    <TextView
+                        android:id="@+id/tvHomepage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="http://www.justiceleaguethemovie.com"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:autoLink="all"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:text="Overview"/>
+
+                    <TextView
+                        android:id="@+id/tvOverview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Fueled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry, and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth."/>
+
+
+                    <!--<TextView
+                        android:id="@+id/tvLabelGenres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:text="genres"/>
+
+                    <TextView
+                        android:id="@+id/tvGenres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Action, Adventure, Fantasy, Science Fiction"/>
+
+
+
+                    <TextView
+                        android:id="@+id/tvLabelProductionCompanies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:text="Production companies"/>
+
+                    <TextView
+                        android:id="@+id/tvProductionCompanies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="DC Comics, Kennedy Miller Productions, Lin Pictures, Warner Bros, DC Entertainment, RatPac-Dune Entertainment"/>
+                    -->
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

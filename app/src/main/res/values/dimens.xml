@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_title_categories">70dp</dimen>
+    <dimen name="font_size_film_title_list">18sp</dimen>
+    <dimen name="font_size_title_video_youtube">14sp</dimen>
+</resources>
