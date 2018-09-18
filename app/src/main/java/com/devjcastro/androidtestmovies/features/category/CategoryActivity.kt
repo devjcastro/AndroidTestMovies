@@ -24,6 +24,8 @@ class CategoryActivity : AppCompatActivity(), ICategoryView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category)
 
+        title = "Categorías"
+
         DaggerCategoryComponent.builder()
                 .categoryModule(CategoryModule())
                 .build().inject(this)

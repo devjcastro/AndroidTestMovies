@@ -19,17 +19,6 @@ class MovieApiFactory {
 
         var BASE_URL = "https://api.themoviedb.org/3/"
         private var retrofit: Retrofit.Builder? = null
-        //private var retrofitWithToken: Retrofit.Builder? = null
-
-
-        /*fun createAuth(): AuthService {
-            return initRetrofit()?.build()?.create<AuthService>(AuthService::class.java)!!
-        }
-
-        fun createProspect(): ProspectService {
-            return initRetrofitWithToken()
-                    ?.build()?.create<ProspectService>(ProspectService::class.java)!!
-        }*/
 
         fun build(): MovieService {
             return initRetrofit()

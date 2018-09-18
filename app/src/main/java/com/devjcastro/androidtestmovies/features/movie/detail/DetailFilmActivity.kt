@@ -26,7 +26,7 @@ class DetailFilmActivity : AppCompatActivity() {
     }
 
     fun initData(){
-        title = "Descripción de la Película"
+        title = "Detall de la Película"
         val bundle = intent.extras
         if (bundle != null) {
             val filmId = bundle.getString(PreferencesUtils.KeyPreferences.FILM_ID)
