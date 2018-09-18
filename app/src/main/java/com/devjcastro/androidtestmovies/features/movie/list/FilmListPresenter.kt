@@ -13,6 +13,7 @@ enum class FilmCategories {
 
 interface IFilmListPresenter: IBasePresenter<IFilmListView> {
     fun dispatchFilms(category: FilmCategories)
+    fun onSuccessListFilms(categories: List<FilmDTO>?)
 }
 
 class FilmListPresenter: BasePresenter<IFilmListView>, IFilmListPresenter, FilmListInteractor.CallbackInteractor {

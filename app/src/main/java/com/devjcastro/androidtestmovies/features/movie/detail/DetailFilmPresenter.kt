@@ -12,6 +12,8 @@ import javax.inject.Inject
 interface IDetailFilmPresenter: IBasePresenter<IDetailFilmView>{
     fun getDetailMovie(filmId: Long)
     fun getAllVideos(filmId: Long)
+    fun onSuccessDetailFilm(film: FilmDTO?)
+    fun onSuccessYoutubeVideos(films: List<YoutubeVideoDTO>?)
 }
 
 class DetailFilmPresenter: BasePresenter<IDetailFilmView>, IDetailFilmPresenter, DetailFilmInteractor.CallbackInteractor {

@@ -9,6 +9,7 @@ import javax.inject.Inject
 
 interface ICategoryPresenter: IBasePresenter<ICategoryView> {
     fun dispatchCategories()
+    fun onSuccessListCategories(categories: List<CategoryEntity>)
 }
 
 class CategoryPresenter: BasePresenter<ICategoryView>, ICategoryPresenter, CategoryInteractor.CallbackInteractor {
