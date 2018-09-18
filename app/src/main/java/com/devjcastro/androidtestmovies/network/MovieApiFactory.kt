@@ -1,13 +1,10 @@
-package com.devjcastro.androidtestmovies.data.network
+package com.devjcastro.androidtestmovies.network
 
-import android.graphics.Movie
-import com.devjcastro.androidtestmovies.utils.Prefs
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 
 class MovieApiFactory {
 

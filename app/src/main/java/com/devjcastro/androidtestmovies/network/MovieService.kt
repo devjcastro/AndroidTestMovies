@@ -1,4 +1,4 @@
-package com.devjcastro.androidtestmovies.data.network
+package com.devjcastro.androidtestmovies.network
 
 import com.devjcastro.androidtestmovies.data.dtos.FilmDTO
 import com.devjcastro.androidtestmovies.data.dtos.ResponseDTO

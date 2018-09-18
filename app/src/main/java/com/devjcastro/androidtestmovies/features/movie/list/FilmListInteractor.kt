@@ -3,7 +3,7 @@ package com.devjcastro.androidtestmovies.features.movie.list
 import com.devjcastro.androidtestmovies.data.db.DBHelper
 import com.devjcastro.androidtestmovies.data.db.entities.FilmEntity
 import com.devjcastro.androidtestmovies.data.dtos.FilmDTO
-import com.devjcastro.androidtestmovies.data.network.MovieApiFactory
+import com.devjcastro.androidtestmovies.network.MovieApiFactory
 import com.devjcastro.androidtestmovies.utils.ConstantUtils
 import com.devjcastro.androidtestmovies.utils.NetworkUtils
 import com.devjcastro.androidtestmovies.utils.PreferencesUtils
