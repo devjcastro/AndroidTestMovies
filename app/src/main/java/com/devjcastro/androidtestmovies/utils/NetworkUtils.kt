@@ -9,9 +9,11 @@ import android.support.v4.content.ContextCompat.getSystemService
 
 
 class NetworkUtils {
-    fun isOnline(): Boolean {
-        val cm = MovieApplication.getAppContext()?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val netInfo = cm.activeNetworkInfo
-        return netInfo != null && netInfo.isConnectedOrConnecting
+    companion object {
+        fun isOnline(): Boolean {
+            val cm = MovieApplication.getAppContext()?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val netInfo = cm.activeNetworkInfo
+            return netInfo != null && netInfo.isConnectedOrConnecting
+        }
     }
 }

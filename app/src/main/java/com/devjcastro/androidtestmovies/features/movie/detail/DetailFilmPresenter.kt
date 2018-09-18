@@ -2,6 +2,7 @@ package com.devjcastro.androidtestmovies.features.movie.detail
 
 import com.devjcastro.androidtestmovies.data.dtos.FilmDTO
 import com.devjcastro.androidtestmovies.data.dtos.ResponseVideosDTO
+import com.devjcastro.androidtestmovies.data.dtos.YoutubeVideoDTO
 import com.devjcastro.androidtestmovies.di.detailfilm.DaggerDetailFilmComponent
 import com.devjcastro.androidtestmovies.di.detailfilm.DetailFilmModule
 import com.intergrupo.pruebaintergrupo.base.mvp.BasePresenter
@@ -34,7 +35,7 @@ class DetailFilmPresenter: BasePresenter<IDetailFilmView>, IDetailFilmPresenter,
         view?.showDetailFilm(film)
     }
 
-    override fun onSuccessYoutubeVideos(films: ResponseVideosDTO?) {
+    override fun onSuccessYoutubeVideos(films: List<YoutubeVideoDTO>?) {
         view?.getAllVideos(films)
     }
 }

@@ -44,6 +44,21 @@ class DBHelper {
         return query?.findAll()
     }
 
+    fun <T: RealmModel?>getRowsByStringColumn(column: String, valueColumn: String, classType: Class<T>): RealmResults<T>? {
+        val query: RealmQuery<T>? = realm?.where(classType)?.equalTo(column, valueColumn)
+        return query?.findAll()
+    }
+
+    fun <T: RealmModel?>getRowsByIntColumn(column: String, valueColumn: Int, classType: Class<T>): RealmResults<T>? {
+        val query: RealmQuery<T>? = realm?.where(classType)?.equalTo(column, valueColumn)
+        return query?.findAll()
+    }
+
+    fun <T: RealmModel?>getRowsByLongColumn(column: String, valueColumn: Long, classType: Class<T>): RealmResults<T>? {
+        val query: RealmQuery<T>? = realm?.where(classType)?.equalTo(column, valueColumn)
+        return query?.findAll()
+    }
+
     fun <T: RealmModel?>delete(id: String, classType: Class<T>) {
         val entity = realm?.where(classType)?.equalTo("id", id)?.findAll()
         realm?.beginTransaction()

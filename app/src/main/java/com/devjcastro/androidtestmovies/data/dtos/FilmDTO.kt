@@ -10,10 +10,7 @@ class FilmDTO {
     var voteCount: Int? = null
     @SerializedName("id")
     @Expose
-    var id: Int? = null
-
-
-    var categoryId: Int? = null
+    var id: Long? = null
 
     @SerializedName("video")
     @Expose

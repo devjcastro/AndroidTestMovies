@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import com.devjcastro.androidtestmovies.R
 import com.devjcastro.androidtestmovies.data.dtos.FilmDTO
 import com.devjcastro.androidtestmovies.data.dtos.ResponseVideosDTO
+import com.devjcastro.androidtestmovies.data.dtos.YoutubeVideoDTO
 import com.devjcastro.androidtestmovies.di.detailfilm.DaggerDetailFilmComponent
 import com.devjcastro.androidtestmovies.di.detailfilm.DetailFilmModule
 import com.devjcastro.androidtestmovies.features.movie.detail.DetailFilmActivity
@@ -28,7 +29,7 @@ class DetailFragment : Fragment(), IDetailFilmView {
     var filmId: Long = 0
 
     var containerView: View? = null
-    var videos: ResponseVideosDTO? = null
+    var videos: List<YoutubeVideoDTO>? = null
 
 
     init {
@@ -63,7 +64,7 @@ class DetailFragment : Fragment(), IDetailFilmView {
 
 
     fun viewTrailer(){
-        var trailer = videos?.results?.filter { it.type == "Trailer" }?.first()
+        var trailer = videos?.filter { it.type == "Trailer" }?.first()
         trailer?.let {
             var intent = Intent(activity, YoutubeVideoActivity::class.java)
             intent.putExtra("videoID", it.key)
@@ -99,10 +100,10 @@ class DetailFragment : Fragment(), IDetailFilmView {
         containerView?.tvHomepage?.text = film?.homePage
     }
 
-    override fun getAllVideos(videos: ResponseVideosDTO?) {
+    override fun getAllVideos(videos: List<YoutubeVideoDTO>?) {
+        this.videos = videos
         videos?.let {
-            this.videos = it
-            it.results?.let {
+            it?.let {
                 DetailFilmActivity.subject?.onNext(it)
             }
         }

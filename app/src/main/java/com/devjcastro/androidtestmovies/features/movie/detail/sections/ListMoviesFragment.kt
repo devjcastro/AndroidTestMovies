@@ -56,12 +56,11 @@ class ListMoviesFragment : Fragment() {
 
 
     private fun loadVideos(videos: List<YoutubeVideoDTO>?){
-
-        if(videos != null && videos.isNotEmpty()){
+        videos?.let {
             containerView.ivEmpty.visibility = View.GONE
             containerView.progressBar.visibility = View.GONE
 
-            adapter = YoutubeVideoAdapter(videos)
+            adapter = YoutubeVideoAdapter(it)
             rvVideos.adapter = adapter
             containerView.rvVideos.visibility = View.VISIBLE
         }
